@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <script>
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+  <body>
+    <!-- header section -->
+
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a
+              href="#home"
+              class="font-bold text-lg text-dark dark:text-orange block py-6"
+              >My Class</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="humberger"
+              name="humberger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="humberger-line transition duration-200 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="humberger-lina transition duration-200 ease-in-out"
+              ></span>
+              <span
+                class="humberger-line transition duration-200 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class=" hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:shadow-slate-600 lg:dark:bg-transparent dark:bg-dark"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-dark dark:text-white py-2 mx-8 flex hover:text-orange dark:hover:text-orange"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark dark:text-white py-2 mx-8 flex hover:text-orange dark:hover:text-orange"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#jadwal"
+                    class="text-base text-dark dark:text-white py-2 mx-8 flex hover:text-orange dark:hover:text-orange"
+                    >Jadwal</a
+                  >
+                </li>
+
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-base text-dark dark:text-white py-2 mx-8 flex hover:text-orange dark:hover:text-orange"
+                    >Contact</a
+                  >
+                </li>
+                <li class="mt-2 lg:mt-0 flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 filter-yellow"
+                      ><img src="../img/sun.png" alt="sun"
+                    /></span>
+                    <input type="checkbox" id="dark-toggle" class="hidden" />
+                    <label for="dark-toggle">
+                      <div
+                        class="w-9 h-5 bg-slate-500 rounded-full cursor-pointer flex p-1 items-center"
+                      >
+                        <div
+                          class="w-4 h-4 bg-white rounded-full toggle-circle transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2"
+                      ><img src="../img/moon.png" alt="monn"
+                    /></span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- home section -->
+    <section id="home" class="pt-36 pb-24 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-orange md:text-xl">
+              Halo Semua👋,
+            </h1>
+            <div
+              class="block font-bold text-dark text-4xl dark:text-white lg:text-5xl"
+            >
+              Welcome X RPL 1
+            </div>
+
+            <p class="text-slate-400 font-medium mb-10 leading-relaxed">
+              Kelas yang solid dan berwibawa yang di didik oleh guru kami yaitu
+              <span class="font-bold dark:text-white">: Dimas Kurniawan SE</span
+              >😊
+            </p>
+            
+            <a
+              href="https://www.instagram.com/official_xrpl1?igsh=MWRyc25jcTUwZW40MQ=="
+              class="text-sm font-semibold text-white bg-red-600 rounded-full py-3 px-2 hover:shadow-md hover:opacity-90 transition duration-300 ease-in-out"
+              > instragram Kami</a
+            >
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="mt-10 lg:mt-9 lg:right-0">
+              <img
+                src="../img/rpl1.jpeg"
+                width="300"
+                height="300"
+                alt="azhy sholihin"
+                class="max-w-full mx-auto rounded-full shadow-slate-500 shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section -->
+    <section class="pt-32 pb-32 dark:bg-dark" id="about">
+      <div class="container">
+        <div
+          class="text-center font-bold text-4xl text-dark dark:text-orange p-3"
+        >
+          About
+        </div>
+        <div class="w-full">
+          <div class="text-center text-slate-500 mb-3 text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            numquam voluptas omnis excepturi. Nihil architecto corrupti rem,
+            placeat rerum fugit officia in omnis deleniti distinctio, quo, quod
+            odit temporibus esse.
+          </div>
+          <div class=" grid grid-cols-2  md:grid-cols-4 gap-5">
+            <div class="shrink-0 p-3 shadow-md shadow-slate-600">
+              <img
+                class="rounded-md  mx-auto transition-all hover:scale-110 duration-500 hover:rotate-12"
+                width="200"
+                height="200"
+                src="../img/rpl1.jpeg"
+                alt="content 1"
+              />
+              <div class="text-center text-orange dark:text-white text-sm p-3 z-10 mt-2 ">
+                Kegiatan 10
+              </div>
+            </div>
+            <div class="shrink-0 p-3 shadow-md shadow-slate-600">
+              <img
+                class="rounded-md mx-auto hover:scale-110 ransition-all duration-500 hover:rotate-12"
+                width="200"
+                height="200"
+                src="../img/rpl1.jpeg"
+                alt="content 1"
+              />
+              <div class="text-center text-orange dark:text-white text-sm p-3 mt-2">
+                Kegiatan 1
+              </div>
+            </div>
+            <div class="shrink-0 p-3 shadow-md shadow-slate-600">
+              <img
+                class="rounded-md mx-auto hover:scale-110 ransition-all duration-500 hover:rotate-12"
+                width="200"
+                height="200"
+                src="../img/rpl1.jpeg"
+                alt="content 1"
+              />
+              <div class="text-center text-orange dark:text-white text-sm p-3 mt-2">
+                Kegiatan 1
+              </div>
+            </div>
+            <div class="shrink-0 p-3 shadow-md shadow-slate-600">
+              <img
+                class="rounded-md mx-auto hover:scale-110 ransition-all duration-500 hover:rotate-12"
+                width="200"
+                height="200"
+                src="../img/rpl1.jpeg"
+                alt="content 1"
+              />
+              <div class="text-center text-orange dark:text-white text-sm p-3 mt-2">
+                Kegiatan 1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jadwal section -->
+    <section id="jadwal" class="pt-36 dark:bg-dark pb-32">
+      <div class="container">
+        <div class="text-4xl dark:text-orange text-dark font-bold text-center">
+          Jadwal
+        </div>
+        <div
+          class="text-center text-1xl m-5 dark:text-orange text-dark font-semibold"
+        >
+          <h2>Choose Day</h2>
+        </div>
+        <div class="flex justify-center gap-2 flex-wrap">
+          <div
+            class="bg-slate-400 p-5 dark:hover:bg-slate-400 hover:bg-slate-500 cursor-pointer shadow-sm w-[180px] rounded-md dark:shadow-white shadow-black dark:bg-slate-300"
+          >
+            <h1 class="text-dark dark:text-orange text-2xl">Senin</h1>
+            <div class="w-[150px] h-[1px] bg-black"></div>
+            <ul class="text-white pt-1 dark:text-dark">
+              <li>PJOK</li>
+              <li>PJOK</li>
+              <li>PJOK</li>
+              <li class="italic text-red-600 text-sm">ISTIRAHAT</li>
+              <li>IPAS</li>
+              <li>IPAS</li>
+              <li>IPAS</li>
+              <li class="italic text-red-600 text-sm">ISTIRAHAT</li>
+              <li>AGAMA</li>
+              <li>AGAMA</li>
+            </ul>
+          </div>
+          <div
+            class="bg-slate-400 dark:hover:bg-slate-400 hover:bg-slate-500 cursor-pointer p-5 shadow-sm w-[180px] rounded-md dark:shadow-white shadow-black dark:bg-slate-300"
+          >
+            <h1 class="text-dark dark:text-orange text-2xl">Selasa</h1>
+            <div class="w-[150px] h-[1px] bg-black"></div>
+            <ul class="text-white pt-1 dark:text-dark">
+              <li>MM</li>
+              <li>MM</li>
+              <li>KEAHLIAN</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>BIN</li>
+              <li>BIN</li>
+              <li>MULOK</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>MULOK</li>
+              <li>KEAHLIAN</li>
+            </ul>
+          </div>
+          <div
+            class="bg-slate-400 dark:hover:bg-slate-400 hover:bg-slate-500 cursor-pointer p-5 shadow-sm w-[180px] rounded-md dark:shadow-white shadow-black dark:bg-slate-300"
+          >
+            <h1 class="text-dark dark:text-orange text-2xl">Rabu</h1>
+            <div class="w-[150px] h-[1px] bg-black"></div>
+            <ul class="text-white pt-1 dark:text-dark">
+              <li>BING</li>
+              <li>BING</li>
+              <li>BIN</li>
+              <li>BIN</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>IPAS</li>
+              <li>IPAS</li>
+              <li>IPAS</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>PKN</li>
+              <li>PKN</li>
+            </ul>
+          </div>
+          <div
+            class="bg-slate-400 p-5 dark:hover:bg-slate-400 hover:bg-slate-500 cursor-pointer shadow-sm w-[180px] rounded-md dark:shadow-white shadow-black dark:bg-slate-300"
+          >
+            <h1 class="text-dark dark:text-orange text-2xl">Kamis</h1>
+            <div class="w-[150px] h-[1px] bg-black"></div>
+            <ul class="text-white pt-1 dark:text-dark">
+              <li>KEAHLIAN</li>
+              <li>KEAHLIAN</li>
+              <li>INFORMATIKA</li>
+              <li>INFORMATIKA</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>KEAHLIAN</li>
+              <li>KEAHLIAN</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>SEJARAH</li>
+              <li>SEJARAH</li>
+            </ul>
+          </div>
+          <div
+            class="bg-slate-400 p-5 shadow-sm w-[180px] rounded-md dark:shadow-white shadow-black dark:bg-slate-300 dark:hover:bg-slate-400 hover:bg-slate-500 cursor-pointer"
+          >
+            <h1 class="text-dark dark:text-orange text-2xl">Jumat</h1>
+            <div class="w-[150px] h-[1px] bg-black"></div>
+            <ul class="text-white pt-1 dark:text-dark">
+              <li>BING</li>
+              <li>BING</li>
+              <li>SENI BUDAYA</li>
+              <li>SENI BUDAYA</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>INFORMATIKA</li>
+              <li>INFORMATIKA</li>
+            </ul>
+          </div>
+          <div
+            class="bg-slate-400 p-5 dark:hover:bg-slate-400 hover:bg-slate-500 cursor-pointer shadow-sm w-[180px] rounded-md dark:shadow-white shadow-black dark:bg-slate-300"
+          >
+            <h1 class="text-dark dark:text-orange text-2xl">Sabtu</h1>
+            <div class="w-[150px] h-[1px] bg-black"></div>
+            <ul class="text-white pt-1 dark:text-dark">
+              <li>MM</li>
+              <li>MM</li>
+              <li>AGAMA</li>
+              <li>KEAHLIAN</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>KEAHLIAN</li>
+              <li>KEAHLIAN</li>
+              <li class="italic text-sm text-red-600">ISTIRAHAT</li>
+              <li>KEAHLIAN</li>
+              <li>KEAHLIAN</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" class="pt-36 pb-32 dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-bold text-4xl dark:text-orange m5">Contact</h4>
+            <p class="text-base mt-4 text-slate-500">
+              Berikan kekurangan website kelas kami 😊
+            </p>
+          </div>
+          <form>
+            <div class="w-full lg:w-2/3 lg:mx-auto">
+              <div class="w-full px-4 mb-4">
+                <label for="name" class="text-base dark:text-orange font-bold">
+                  Name :
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full dark:shadow-sm dark:shadow-white bg-slate-500 text-white p-3 rounded-md focus:outline-none focus:ring-orange focus:ring-1 focus:border-orange"
+                />
+              </div>
+
+              <div class="w-full px-4 mb-4">
+                <label for="email" class="text-base font-bold dark:text-orange">
+                  Email :
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full bg-slate-500 p-3 dark:shadow-sm text-white dark:shadow-white rounded-md focus:outline-none focus:ring-1 focus:ring-orange focus:border-orange "
+                />
+              </div>
+
+              <div class="w-full px-4 mb-4">
+                <label for="email" class="text-base font-bold dark:text-orange">
+                  Pesan :
+                </label>
+                <textarea name="pesan" id="pesan" class="w-full bg-slate-500 text-white p-3 dark:shadow-sm dark:shadow-white rounded-md focus:outline-none focus:ring-1 focus:ring-orange focus:border-orange"></textarea>
+                <!-- <input
+                  type="text"
+                  id="pesan"
+                  class="w-full bg-slate-500 p-5 dark:shadow-sm dark:shadow-white rounded-md focus:outline-none focus:ring-1 focus:ring-orange focus:border-orange"
+                /> -->
+              </div>
+
+              <div class="w-full px-4">
+                <button id="sendWa"
+                  class="text-base rounded-full py-[6px] text-white w-full hover:opacity-80 hover:shadow-lg bg-orange transition duration-500"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="pt-24 pb-12 relative dark:bg-slate-800">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 text-slate-500 font-medium md:w-1/2">
+            <h2 class="font-bold dark:text-orange text-3xl">RPL1</h2>
+            <h3 class="font-bold text-white text-1xl mb-5">Hubungi kami</h3>
+            <p>azhysholihin@gmail.com</p>
+            <p>Jl. Sei Silau Tua</p>
+            <p>Kisaran</p>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/2 text-slate-500 font-medium">
+            <h2 class="font-bold text-3xl dark:text-orange mb-5">Tautan</h2>
+            <ul class="text-slate-500">
+              <li><a class="inline-block cursor-pointer text-base hover:text-orange mb-2" href="#home">Beranda</a></li>
+              <li><a class="inline-block cursor-pointer text-base hover:text-orange mb-2" href="#about">About</a></li>
+              <li><a class="inline-block cursor-pointer text-base hover:text-orange mb-2" href="#jadwal">Jadwal</a></li>
+              <li><a class="inline-block cursor-pointer text-base hover:text-orange mb-2" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="w-full pt-10 border-t border-slate-700">
+            <div class="flex items-center justify-center mb-5">
+              <!-- instragram -->
+              <a
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-orange hover:bg-orange hover:text-white"
+                href="https://www.instagram.com/official_xrpl1?igsh=MWRyc25jcTUwZW40MQ=="
+                target="_blank"
+                ><svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+  
+              <!-- faccbok -->
+              <a
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-orange hover:bg-orange hover:text-white"
+                href="https://www.facebook.com/Zhyy/"
+                target="_blank"
+                ><svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                  />
+                </svg>
+              </a>
+  
+              <!-- tiktok -->
+              <a
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-orange hover:bg-orange hover:text-white"
+                href="https://www.tiktok.com/@rxrey3/"
+                target="_blank"
+                ><svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
+              <p class="font-medium text-[0.75rem] text-slate-500 text-center">
+                created by <span class="text-red-700">❤️</span>
+                <a
+                  href="https://www.instagram.com/azyy2.7/"
+                  target="_blank"
+                  class="font-bold text-green"
+                  >Azhy Sholihin</a
+                >,Mei 2024
+              </p>
+            </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../js/script.js"></script>
+</html>
